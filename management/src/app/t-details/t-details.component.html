@@ -1,0 +1,35 @@
+<h2 style="color: white;">Employee Details</h2>
+
+<hr/>
+<img class="card-img-top" style="padding-left: 170px;" src="../../assets/images/emp2.jpg" alt="Card image cap">
+<br>
+<br>
+<div *ngIf="booking" style="text-decoration-color: white; background-color: aliceblue; padding: 10px;">
+  <br>
+  <div>
+    <label style="color: black;"><b>ID: </b></label> {{booking.firstName}}
+  </div>
+  <div>
+    <label style="color: black;"><b>Name: </b></label> {{booking.lastName}}
+  </div>
+  <div>
+    <label style="color: black;"><b>Project: </b></label> {{booking.emailId}}
+  </div>
+  <div>
+    <label style="color: black;"><b>Contact No: </b></label> {{booking.phone}}
+  </div>
+  <div>
+    <label style="color: black;"><b>City: </b></label> {{booking.address}}
+  </div>
+  <div>
+    <label style="color: black;"><b>Gender: </b></label> {{booking.source}}
+  </div>
+  <div>
+    <label style="color: black;"><b>Date of joining: </b></label> {{booking.date}}
+  </div>
+<br>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Manager View</button><br>

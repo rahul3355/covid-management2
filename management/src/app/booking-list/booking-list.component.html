@@ -1,0 +1,46 @@
+<div class="panel panel-warning">
+    <div class="panel-heading">
+      <h2>Employee List</h2>
+      <div class="input-group rounded">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <span class="input-group-text border-0" id="search-addon">
+          <i class="fas fa-search"></i>
+        </span>
+      </div>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Project</th>
+            <th>Phone</th>
+            <th>City</th>
+            <th>Gender</th>
+            <th>Date of Covid-19</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let booking of bookings | async">
+            <td>{{booking.firstName}}</td>
+            <td>{{booking.lastName}}</td>
+            <td>{{booking.emailId}}</td>
+            <td>{{booking.phone}}</td>
+            <td>{{booking.address}}</td>
+            <td>{{booking.source}}</td>
+            <td>{{booking.date}}</td>
+
+
+            <td><button (click)="deleteBooking(booking.id)" class="btn btn-danger">Delete</button>
+                <button (click)="updateBooking(booking.id)" class="btn btn-success" style="margin-left: 10px">Avail Benefits</button>
+                <button (click)="bookingDetails(booking.id)" class="btn btn-info" style="margin-left: 10px">Employee Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+</div>

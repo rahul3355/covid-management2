@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="col-lg-6">
+        <img src="../../assets/images/covid1.jpg">
+
+    </div>
+
+<div class="col-lg-6">
+<h3 style="color: white;">Avail Benefit</h3>
+<div [hidden]="submitted">
+  <form (ngSubmit)="onSubmit()">
+      <div class="row">
+
+    <div class="col-md-6 form-group">
+      <label for="name">ID</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="var_firstName" name="firstName">
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="var_lastName" name="lastName">
+    </div>
+    </div>
+
+    <div class="row">
+
+
+    <div class="col-md-6 form-group">
+      <label for="name">Project</label>
+      <input type="email" class="form-control" id="emailId" required [(ngModel)]="var_emailId" name="emailId">
+    </div>
+    <div class="col-md-6 form-group">
+      <label for="name">Contact Number</label>
+      <input type="email" class="form-control" id="emailId" required [(ngModel)]="var_phone" name="emailId">
+    </div>
+    </div>
+
+
+
+      <div class="row">
+      <div class="col-md-6 form-group">
+        <label for="name">City</label>
+        <input type="text" class="form-control" id="address" required [(ngModel)]="var_address" name="address">
+      </div>
+      </div>
+
+      <div class="row">
+
+      <div class="col-md-6 form-group">
+        <label for="name">Gender</label>
+        <input type="text" class="form-control" id="source" required [(ngModel)]="var_source" name="source">
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label for="name">Dosage</label>
+        <input type="text" class="form-control" id="destination" required [(ngModel)]="var_destination" name="source">
+      </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-12 form-group">
+          <label for="name">Date of Covid</label>
+          <input type="date" class="form-control" id="date" required [(ngModel)]="var_date" name="date">
+        </div>
+
+      </div>
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+
+</div>
+</div>

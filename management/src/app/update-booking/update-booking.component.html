@@ -1,0 +1,158 @@
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
+
+
+<h3 style="color: white;">Approve Leave and Benefits</h3>
+<br>
+<div>
+  <img src="../../assets/images/medical_leave_letter.jpg" alt="" style="padding-left: 200px;">
+  <br>
+  <br>
+
+  <div style="align-items: center;">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+
+            <h5 class="card-title" style="color: white;">1. Medic Kit</h5>
+
+            <p class="card-text">2. Home Quarantine</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+
+            <p class="card-text">3. Sick Leave: 14 Days</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+
+            <p class="card-text">4. Cash Relief: Rs. 10000</p>
+
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+  <br>
+
+
+
+  <br> <br>
+
+  <div class="input-group" style="background-color: white; padding: 10px; align-items: center; margin-left: 150px;">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroupFileAddon01" style="color: rgb(46, 0, 121);">Upload Vaccine Certificate</span>
+    </div>
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="inputGroupFile01"
+        aria-describedby="inputGroupFileAddon01">
+      <label class="custom-file-label" for="inputGroupFile01" style="color: rgb(170, 0, 0);">It is compulsory to be fully vaccinated</label>
+    </div>
+  </div>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="row">
+
+      <div class="col-md-6 form-group">
+        <label for="name">ID</label>
+        <input type="text" class="form-control" id="firstName" required [(ngModel)]="booking.firstName"
+          name="firstName">
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="lastName" required [(ngModel)]="booking.lastName" name="lastName">
+      </div>
+    </div>
+
+    <div class="row">
+
+
+      <div class="col-md-6 form-group">
+        <label for="name">Project</label>
+        <input type="email" class="form-control" id="emailId" required [(ngModel)]="booking.emailId" name="emailId">
+      </div>
+
+
+
+      <div class="col-md-6 form-group dropdo">
+        <label for="name">Contact</label>
+        <input type="email" class="form-control" id="emailId" required [(ngModel)]="booking.phone" name="phone">
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <label for="name">City</label>
+        <input type="text" class="form-control" id="address" required [(ngModel)]="booking.address" name="address">
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6 form-group">
+        <label for="name">Gender</label>
+        <input type="text" id="source" name="source" class="form-control"
+      [(ngModel)]="booking.source">
+
+
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label for="name">Dosage</label>
+        <input type="text" class="form-control" id="source" required [(ngModel)]="booking.destination" name="destination">
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 form group">
+      <label for="date">Date of Covid</label>
+      <input type="text" class="form-control" id="date" required [(ngModel)]="booking.date" name="date">
+      </div>
+
+    </div>
+    <br><br>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+      <label class="form-check-label" for="flexCheckDefault">
+         I, hereby confirm that I am an employee of Hexaware
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+      <label class="form-check-label" for="flexCheckChecked">
+         I am vaccinated with both doses of Covid-19 vaccines.
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2" >
+      <label class="form-check-label" for="flexCheckChecked">
+        I have uploaded my vaccination documents.
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3" >
+      <label class="form-check-label" for="flexCheckChecked">
+        I got tested positive for Covid-19 in last 90 days.
+      </label>
+    </div>
+    <br><br>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
